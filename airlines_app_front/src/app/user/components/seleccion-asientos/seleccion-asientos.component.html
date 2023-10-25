@@ -1,0 +1,339 @@
+<div    class="asientos-container" *ngIf="vuelo !== undefined && asientos !== undefined && usuario !== undefined" >
+
+    <p class="title-selection">Bienvenido {{ usuario.nombre }}</p>
+
+
+        <p class="title">Seleccione un asiento</p>
+
+
+        <div class="asientos-contain mt-5">
+            <p class="title">Asientos clase ejecutiva</p>
+            <span class="precio-asiento">COP ${{ vuelo.precioAsientoVip }} unidad</span>
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] ="asientos.asientos_vip[0].libre ? 'icono' : 'inactivo'"  (click)="obtenerAsiento('v0')" name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[1].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v1')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[2].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v2')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[3].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v3')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[4].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v4')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[5].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v5')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[6].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v6')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[7].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v7')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[8].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v8')"  name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[9].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v9')"  name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[10].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v10')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[11].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v11')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[12].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v12')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[13].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v13')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[14].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v14')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[15].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v15')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[16].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v16')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[17].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v17')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[18].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v18')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[19].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v19')"   name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[20].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v20')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[21].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v21')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[22].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v22')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[23].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v23')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[24].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v24')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[25].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v25')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[26].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v26')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[27].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v27')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[28].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v28')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_vip[29].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('v29')"   name="asiento"></span>
+
+            </div>
+        </div>
+
+
+
+        <div class="asientos-contain mt-5">
+            <p class="title">Asientos clase normal</p>
+            <span class="precio-asiento">COP ${{ vuelo.precioAsientoNormal }} unidad</span>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[0].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n0')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[1].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n1')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[2].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n2')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[3].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n3')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[4].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n4')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[5].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n5')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[6].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n6')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[7].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n7')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[8].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n8')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[9].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n9')"   name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[10].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n10')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[11].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n11')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[12].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n12')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[13].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n13')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[14].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n14')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[15].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n15')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[16].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n16')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[17].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n17')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[18].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n18')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[19].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n19')"     name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[20].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n20')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[21].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n21')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[22].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n22')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[23].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n23')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[24].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n24')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[25].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n25')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[26].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n26')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[27].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n27')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[28].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n28')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[29].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n29')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[30].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n30')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[31].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n31')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[32].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n32')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[33].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n33')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[34].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n34')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[35].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n35')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[36].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n36')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[37].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n37')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[38].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n38')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[39].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n39')"   name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[40].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n40')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[41].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n41')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[42].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n42')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[43].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n43')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[44].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n44')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[45].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n45')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[46].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n46')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[47].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n47')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[48].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n48')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[49].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n49')"     name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[50].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n50')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[51].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n51')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[52].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n52')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[53].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n53')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[54].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n54')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[55].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n55')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[56].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n56')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[57].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n57')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[58].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n58')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[59].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n59')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[60].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n60')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[61].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n61')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[62].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n62')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[63].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n63')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[64].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n64')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[65].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n65')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[66].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n66')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[67].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n67')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[68].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n68')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_normal[69].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('n69')"   name="asiento"></span>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="asientos-contain mt-5">
+            <p class="title">Asientos clase economica</p>
+            <span class="precio-asiento">COP ${{ vuelo.precioAsientoBasico }} unidad</span>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[0].libre ?'icono' : 'inactivo'" (click)="obtenerAsiento('e0')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[1].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e1')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[2].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e2')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[3].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e3')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[4].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e4')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[5].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e5')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[6].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e6')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[7].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e7')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[8].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e8')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[9].libre ? 'icono': 'inactivo'" (click)="obtenerAsiento('e9')"   name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[10].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e10')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[11].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e11')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[12].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e12')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[13].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e13')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[14].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e14')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[15].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e15')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[16].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e16')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[17].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e17')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[18].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e18')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[19].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e19')"     name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[20].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e20')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[21].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e21')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[22].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e22')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[23].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e23')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[24].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e24')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[25].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e25')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[26].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e26')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[27].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e27')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[28].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e28')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[29].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e29')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[30].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e30')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[31].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e31')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[32].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e32')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[33].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e33')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[34].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e34')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[35].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e35')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[36].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e36')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[37].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e37')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[38].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e38')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[39].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e39')"   name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[40].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e40')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[41].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e41')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[42].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e42')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[43].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e43')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[44].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e44')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[45].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e45')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[46].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e46')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[47].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e47')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[48].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e48')"     name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[49].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e49')"     name="asiento"></span>
+
+            </div>
+
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[50].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e50')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[51].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e51')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[52].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e52')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[53].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e53')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[54].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e54')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[55].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e55')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[56].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e56')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[57].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e57')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[58].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e58')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[59].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e59')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[60].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e60')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[61].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e61')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[62].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e62')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[63].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e63')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[64].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e64')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[65].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e65')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[66].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e66')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[67].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e67')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[68].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e68')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[69].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e69')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[70].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e70')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[71].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e71')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[72].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e72')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[73].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e73')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[74].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e74')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[75].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e75')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[76].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e76')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[77].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e77')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[78].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e78')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[79].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e79')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[80].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e80')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[81].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e81')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[82].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e82')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[83].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e83')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[84].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e84')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[85].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e85')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[86].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e86')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[87].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e87')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[88].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e88')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[89].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e89')"   name="asiento"></span>
+
+            </div>
+
+            <div class="asientos-subcontainer mt-3">
+
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[90].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e90')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[91].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e91')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[92].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e92')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[93].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e93')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[94].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e94')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[95].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e95')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[96].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e96')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[97].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e97')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[98].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e98')"   name="asiento"></span>
+                <span   type="radio" [ngClass] = "asientos.asientos_economicos[99].libre ? 'icono' : 'inactivo'" (click)="obtenerAsiento('e99')"   name="asiento"></span>
+
+            </div>
+        </div>
+
+        <span class="precio-asiento mt-3" *ngIf="errorAsiento">Por favor seleccione un asiento</span>
+        <button class="btn btn-danger mt-5" (click)="crearReserva()">Guardar</button>
+
+</div>

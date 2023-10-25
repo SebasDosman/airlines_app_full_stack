@@ -1,0 +1,35 @@
+<div class="contenedor">
+<div class="contenedor-info-reserva mt-5" *ngIf="infoReserva !== undefined">
+
+    <h1 class="title">Reserva #{{ infoReserva.reservaEnv.idReserva }}</h1>
+
+    <div class="info">
+        <p class="title text-center">Información general del vuelo </p>
+        <p class="data">Vuelo #{{ infoReserva.vueloEnv.idVuelo }}</p>
+        <p class="data">Precio base ${{ infoReserva.vueloEnv.precio }}</p>
+        <p class="data">Fecha de salida {{ infoReserva.vueloEnv.horaSalida | date:"medium" }}</p>
+        <p class="data">Fecha de llegada {{ infoReserva.vueloEnv.horaLlegada | date:"medium" }}</p>
+        <p class="data">Asiento #{{ infoReserva.asientoEnv.ubicacion }}</p>
+        <p class="data">Precio total a pagar ${{ infoReserva.reservaEnv.precioTotal }}</p>
+    </div>
+    <div class="info">
+        <p class="title text-center">Información de las escalas</p>
+        <div *ngFor="let escala of infoReserva.escalasEnv; let i = index">
+            <p>Escala #{{i + 1}}</p>
+
+            <div class="section" *ngIf="listaAeropuertos !== undefined">
+                <p class="data">Salide desde: {{ listaAeropuertos[i][0].nombre }} - {{ listaAeropuertos[i][0].ubicacion}} -  <span class="fecha-container-trayecto">Fecha: {{ escala.horaSalida  | date:"medium"}}</span> </p>
+                <p class="data">Llega a: {{ listaAeropuertos[i][1].nombre }} - {{ listaAeropuertos[i][1].ubicacion}}      - <span class="fecha-container-trayecto">Fecha: {{ escala.horaLlegada | date:"medium"}}</span> </p>
+                <p class="data">Modelo del avión {{ infoReserva.avionesEnv[i].modelo }} - Aerolina {{ infoReserva.avionesEnv[i].aerolinea }}</p>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="botones-container" *ngIf="infoReserva.reservaEnv.estadoPago == 'I'">
+        <button class="btn btn-danger" (click)="cancelarReserva()">Cancelar reserva</button>
+        <button class="btn btn-danger" (click)="pagarReserva()">Pagar reserva</button>
+    </div>
+  </div>
+</div>

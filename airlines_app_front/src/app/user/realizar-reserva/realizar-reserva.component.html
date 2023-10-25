@@ -1,0 +1,16 @@
+
+
+<div class="reserva-container">
+
+    <app-info-vuelo *ngIf="trayectos !== undefined && usuario == undefined" [vuelo]="vuelo" [trayectos]="trayectos"></app-info-vuelo>
+    <app-datos-viajeros></app-datos-viajeros>
+    <app-seleccion-asientos [vuelo]="vuelo"></app-seleccion-asientos>
+
+    <span class="precio" *ngIf="ubiAsiento != ''">Precio total(COP) ${{ precioTotal }}</span>
+
+    <div class="botones-container">
+        <button *ngIf="ubiAsiento != ''" (click)="guardarReserva()" [disabled]="isProcessingRequest" class="btn btn-danger" routerLink="/usuario/observar-reservas">Guardar reserva y pagar después</button>
+        <button *ngIf="ubiAsiento != ''" (click)="pagarReserva()" [disabled]="isProcessingRequest"   class="btn btn-danger" routerLink="/usuario/vuelos-pagados">Guardar reserva y pagar ahora</button>
+    </div>
+</div>
+

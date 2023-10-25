@@ -1,0 +1,17 @@
+<main class="main-page-container">
+
+    <div class="info-container">
+    </div>
+
+    <!-- Seleccionar viaje -->
+    <div class="seleccionar-vuelo">
+
+      
+        <span class="alert alert-danger" *ngIf="!existe && yaCargado">No existen vuelos disponibles con esas características</span>
+        <app-buscar-vuelos [vuelos]="vuelosBuscador"></app-buscar-vuelos>
+    </div>
+
+    <div class="lista-vuelos">
+      <app-lista-vuelos *ngIf="existe"  [vuelos]="vuelos"></app-lista-vuelos>
+    </div>
+</main>

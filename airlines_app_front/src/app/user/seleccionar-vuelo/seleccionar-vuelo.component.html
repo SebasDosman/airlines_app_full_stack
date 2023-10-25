@@ -1,0 +1,12 @@
+
+
+<div class="seleccionar-vuelo-container">
+  <div class="buscar-vuelos">
+    <app-buscar-vuelos *ngIf="vuelos != []" [vuelos]="vuelos"></app-buscar-vuelos>
+  </div>
+
+  <div class="lista-vuelos">
+    <app-lista-vuelos *ngIf="vuelos != []"  [vuelos]="vuelos" ></app-lista-vuelos>
+  </div>
+</div>
+

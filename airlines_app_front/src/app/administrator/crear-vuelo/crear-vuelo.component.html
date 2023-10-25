@@ -1,0 +1,265 @@
+<main class="administrator-component">
+
+    <form   class="container-crear" (submit)="$event.preventDefault()" [formGroup]="crearForm">
+        <h1 class="tittle">Añadir vuelo</h1>
+
+        <span class="alert-danger" *ngIf="errorPrecioTotal">El precio del vuelo debe ser un numero valido y mayor a $50000</span>
+        <span class="alert-danger" *ngIf="errorAsientos">Los precios de los asientos son obligatorios y mayores a $10000</span>
+        <span class="alert-danger" *ngIf="errorEscalas">Los datos de las escalas son requeridos</span>
+        <span class="alert-danger" *ngIf="errorAsiento !== ''">{{ errorAsiento }}</span>
+        <span class="alert-danger" *ngIf="errorAeropuertos">Error en los aeropuertos, no se deben repetir</span>
+        <div class="row_1 border-bottom">
+
+            <div class="input-group mb-3 contain-row1">
+                <label class="input-group-text" for="inputGroupSelect01">Seleccione número de escalas</label>
+
+                <select class="form-select
+                                input-row-1"
+
+                        formControlName="n_escalas"
+                        (change)="cambioNEscalas()">
+
+                  <option select value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+
+                </select>
+              </div>
+
+
+              <div class="input-group mb-3 contain-row1">
+                <label class="input-group-text">Precio base - COP $</label>
+                <input  type="number"
+                        class="form-control input-row-1"
+                        aria-label="Dollar amount (with dot and two decimal places)"
+                        min="50000"
+                        formControlName="precioBase">
+              </div>
+        </div>
+        <hr>
+
+        <div class="row_2 border-bottom">
+
+
+            <div class="escala-container" *ngIf="mostrarEscalas[0]">
+                <span>Escala #1</span>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto salida</span>
+
+                    <select class="form-select" formControlName="aeropuerto_s_1">
+                        <option *ngFor="let value of aeropuertos" [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto llegada</span>
+                    <select class="form-select" formControlName="aeropuerto_f_1">
+                        <option *ngFor="let value of aeropuertos"  [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora salida</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" formControlName="fecha_s_1" min="{{ fechas.fechaPrimerEscala | date:'yyyy-MM-ddTHH:mm:ss' }}">
+
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora llegada</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()"  min="{{fechas.fechaPrimerEscala2 | date:'yyyy-MM-ddTHH:mm:ss'}}"formControlName="fecha_f_1">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione avión</span>
+                    <select class="form-select" formControlName="id_avion_1">
+                        <option *ngFor="let value of aviones" [value]="value.idAvion">{{ value.modelo }}</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+            <div class="escala-container" *ngIf="mostrarEscalas[1]">
+                <span>Escala #2</span>
+
+                <div class="escala-contain-item">
+                    <span>Aeropuerto salida</span>
+
+                    <input class="form-select" [placeholder]="nombreAeropuerto( 2 )"/>
+                </div>
+
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto llegada</span>
+                    <select class="form-select" formControlName="aeropuerto_f_2"> 
+                        <option *ngFor="let value of aeropuertos" [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora salida</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" min="{{fechas.fechaSegundaEscala | date:'yyyy-MM-ddTHH:mm:ss'}}" formControlName="fecha_s_2">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora llegada</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" min="{{fechas.fechaSegundaEscala2 | date:'yyyy-MM-ddTHH:mm:ss'}}" formControlName="fecha_f_2">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione avión</span>
+                    <select class="form-select" formControlName="id_avion_2">
+                        <option *ngFor="let value of aviones" [value]="value.idAvion">{{ value.modelo }}</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="escala-container" *ngIf="mostrarEscalas[2]">
+                <span>Escala #3</span>
+
+                <div class="escala-contain-item">
+                    <span>Aeropuerto salida</span>
+
+                    <input class="form-select" [placeholder]="nombreAeropuerto( 3 )"/>
+                </div>
+
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto llegada</span>
+                    <select class="form-select"  formControlName="aeropuerto_f_3">
+                        <option *ngFor="let value of aeropuertos" [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora salida</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()"  min="{{fechas.fechaTercerEscala | date:'yyyy-MM-ddTHH:mm:ss'}}"  formControlName="fecha_s_3">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora llegada</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" min="{{fechas.fechaTercerEscala2 | date:'yyyy-MM-ddTHH:mm:ss'}}" formControlName="fecha_f_3">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione avión</span>
+                    <select class="form-select" formControlName="id_avion_3">
+                        <option *ngFor="let value of aviones" [value]="value.idAvion">{{ value.modelo }}</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="escala-container" *ngIf="mostrarEscalas[3]">
+                <span>Escala #4</span>
+
+                <div class="escala-contain-item">
+                    <span>Aeropuerto salida</span>
+
+                    <input class="form-select" [placeholder]="nombreAeropuerto( 4 )"/>
+                </div>
+
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto llegada</span>
+                    <select class="form-select"  formControlName="aeropuerto_f_4">
+                        <option *ngFor="let value of aeropuertos" [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora salida</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" min="{{fechas.fechaCuartaEscala | date:'yyyy-MM-ddTHH:mm:ss'}}"  formControlName="fecha_s_4">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora llegada</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()" min="{{fechas.fechaCuartaEscala2 | date:'yyyy-MM-ddTHH:mm:ss'}}" formControlName="fecha_f_4">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione avión</span>
+                    <select class="form-select" formControlName="id_avion_4">
+                        <option *ngFor="let value of aviones" [value]="value.idAvion">{{ value.modelo }}</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="escala-container" *ngIf="mostrarEscalas[4]">
+                <span>Escala #5</span>
+
+                <div class="escala-contain-item">
+                    <span>Aeropuerto salida</span>
+
+                    <input class="form-select" [placeholder]="nombreAeropuerto( 5 )"/>
+                </div>
+
+
+                <div class="escala-contain-item">
+                    <span>Seleccione aeropuerto llegada</span>
+                    <select class="form-select"  formControlName="aeropuerto_f_5">
+                        <option *ngFor="let value of aeropuertos" [value]="value.idAeropuerto">{{ value.nombre }}</option>
+                    </select>
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora salida</span>
+                    <input type="datetime-local"  (change)="validarFechasEscalas()" min="{{fechas.fechaQuintaEscala | date:'yyyy-MM-ddTHH:mm:ss'}}"  formControlName="fecha_s_5">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione fecha y hora llegada</span>
+                    <input type="datetime-local" (change)="validarFechasEscalas()"  min="{{fechas.fechaQuintaEscala2 | date:'yyyy-MM-ddTHH:mm:ss'}}" formControlName="fecha_f_5">
+                </div>
+
+                <div class="escala-contain-item">
+                    <span>Seleccione avión</span>
+                    <select class="form-select" formControlName="id_avion_5">
+                        <option *ngFor="let value of aviones" [value]="value.idAvion">{{ value.modelo }}</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row_3">
+
+            <div class="input-group mb-3 contain-row1">
+                <label class="input-group-text">Precio asientos clase económica</label>
+                <input  type="number"
+                          class="form-control input-row-1"
+                          aria-label="Dollar amount (with dot and two decimal places)"
+                          min="10000"
+                          formControlName="precio_asiento_economica">
+            </div>
+
+            <div class="input-group mb-3 contain-row1">
+                <label class="input-group-text">Precio asientos clase básica</label>
+                <input  type="number"
+                          class="form-control input-row-1"
+                          aria-label="Dollar amount (with dot and two decimal places)"
+                          min="10000"
+                          formControlName="precio_asiento_normal">
+            </div>
+
+            <div class="input-group mb-3 contain-row1">
+                <label class="input-group-text">Precio asientos clase ejecutiva</label>
+                <input  type="number"
+                          class="form-control input-row-1"
+                          aria-label="Dollar amount (with dot and two decimal places)"
+                          min="10000"
+                          formControlName="precio_asiento_ejecutivo">
+            </div>
+        </div>
+
+        <button class   ="btn btn-danger"
+                (click)="enviarInformacion()">Guardar</button>
+    </form>
+</main>
+

@@ -1,0 +1,54 @@
+<main class="aeropuerto-component">
+
+  <app-loading *ngIf="loading"></app-loading>
+
+    <form *ngIf="!loading" class="container-items" (submit)="guardarAeropuerto()" [formGroup]="aeropuertoForm">
+        <h1 class="tittle">Añadir aeropuerto</h1>
+
+        <span *ngIf="errorIata" class="alert-danger"          >El código IATA debe tener 3 caracteres</span>
+        <span *ngIf="errorNombre" class="alert-danger"  >Ingrese un nombre válido (Letras entre 5 y 25 caracteres)</span>
+        <span *ngIf="errorCampos" class="alert-danger"        >Todos los campos son obligatorios</span>
+        <span *ngIf="existeIata" class="alert-danger"        >El código IATA ya está en uso</span>
+
+        <div class="input-group mb-3 contain-row1">
+            <label class="input-group-text">Nombre del aeropuerto</label>
+            <input    type="text"
+                      class="form-control input-row-1"
+                      formControlName="nombre">
+        </div>
+
+
+
+        <div class="input-group mb-3 contain-row1">
+            <label class="input-group-text">País</label>
+            <select class="form-select"
+                    formControlName="pais"
+                    (change)="buscarCiudades()">
+
+                <option *ngFor="let pais of paises"
+                        value="{{pais.country}}">{{ pais.country }}<option>
+            </select>
+        </div>
+
+
+        <div class="input-group mb-3 contain-row1" *ngIf="ciudades.length != 0">
+            <label class="input-group-text">Ciudad</label>
+            <select class="form-select"
+                    formControlName="ciudad">
+
+                <option *ngFor="let ciudad of ciudades"
+                        value ="{{ciudad}}">{{ciudad}}</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3 contain-row1">
+            <label class="input-group-text">Código IATA (3 Caracteres)</label>
+            <input  type="text"
+                    class="form-control input-row-1"
+                    formControlName="iata">
+        </div>
+
+
+        <button class="btn btn-danger" type="submit">Guardar</button>
+    </form>
+</main>

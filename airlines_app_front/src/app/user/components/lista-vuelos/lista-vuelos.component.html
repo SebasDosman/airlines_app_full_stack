@@ -1,0 +1,26 @@
+<div class="lista-vuelos-container">
+
+    <span class="alert-danger" *ngIf="!existe">No hay vuelos disponibles con esas características</span>
+
+    <table class="table table-striped" *ngIf="existe">
+      <thead class="bg-dark font-weight-normal text-light">
+        <tr>
+            <th class="titulos">Origen</th>
+            <th class="titulos">Destino</th>
+            <th class="titulos">Salida</th>
+            <th class="titulos">Llegada</th>
+            <th class="titulos">Precio desde (COP)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr  *ngFor="let vuelo of vuelos" class="elements-tr">
+            <td class="element" [routerLink]="'/usuario/realizar-reserva/' + vuelo.idVuelo">{{ vuelo.aeropuertoOrigen.ubicacion }}</td>
+            <td class="element" [routerLink]="'/usuario/realizar-reserva/' + vuelo.idVuelo">{{ vuelo.aeropuertoDestino.ubicacion}}</td>
+            <td class="element" [routerLink]="'/usuario/realizar-reserva/' + vuelo.idVuelo">{{ vuelo.horaSalida  | date:'medium'  }}</td>
+            <td class="element" [routerLink]="'/usuario/realizar-reserva/' + vuelo.idVuelo">{{ vuelo.horaLlegada | date:'medium'  }}</td>
+            <td class="element" [routerLink]="'/usuario/realizar-reserva/' + vuelo.idVuelo">{{ vuelo.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+
+
+.lista-vuelos-container{
+    width           : 100%  ;
+    display         : flex  ;
+    flex-direction  : column;
+    align-items     : center;
+    height          : 200px ;
+    overflow-y      : auto;
+}
+
+.table {
+    width       : 80%;
+    box-shadow: 0 0 0 1px rgba(53,72,91,.07), 0 2px 2px rgba(0,0,0,.01), 0 4px 4px rgba(0,0,0,.02), 0 10px 8px rgba(0,0,0,.03), 0 15px 15px rgba(0,0,0,.03), 0 30px 30px rgba(0,0,0,.04), 0 70px 65px rgba(0,0,0,.05);
+}
+
+tr {
+    width   : 100%;
+}
+
+
+.elements-tr:hover {
+    background-color: var(--principal-red);
+    cursor          : pointer;
+    color           : white;
+}
+
+.element{
+    font-size: 15px;
+    padding: 10px;
+    height: 15px;
+}
+
+td {
+    width: 20%;
+    height: 30px;
+}
+
+th {
+    width: 20%;
+    height: 30px;
+}
+
+.titulos {
+  font-weight: normal;
+}

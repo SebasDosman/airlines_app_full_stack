@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+:root{
+    --principal-red     : #f01c04;
+    --secondary-white   : #f8f4f4;
+}
+
+html {
+    min-height  : 100%      ;
+    position    : relative  ;
+    font-family: 'Mukta', sans-serif;
+  }
+body {
+    height          : 100%;
+    margin-bottom   : 40px;
+    margin-top      : 75px;
+    font-family: 'Mukta', sans-serif;
+}

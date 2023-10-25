@@ -1,0 +1,95 @@
+.tittle {
+  font-size   : 30px  ;
+  font-weight : 800   ;
+}
+
+  .administrator-component{
+      width   : 100%    ;
+      min-height: 100vh;
+      height  : auto   ;
+      background-color: var(--secondary-white);
+      display         : flex  ;
+      align-items     : center;
+      justify-content : center;
+      padding-top     : 50px  ;
+      padding-bottom  : 50px  ;
+  }
+
+  .container-crear{
+      width           :   1300px  ;
+      background-color: white   ;
+      box-shadow      : 0 0 0 1px rgba(53,72,91,.07), 0 2px 2px rgba(0,0,0,.01), 0 4px 4px rgba(0,0,0,.02), 0 10px 8px rgba(0,0,0,.03), 0 15px 15px rgba(0,0,0,.03), 0 30px 30px rgba(0,0,0,.04), 0 70px 65px rgba(0,0,0,.05);
+      border-radius   : 5px;
+      border-bottom   : 5px solid var(--principal-red);
+      display         : flex          ;
+      flex-direction  : column        ;
+      align-items     : center        ;
+      justify-content : space-around  ;
+      padding:  20px;
+  }
+
+  .row_1{
+      width         : 80%   ;
+      height        : 60px  ;
+      display       : flex  ;
+      flex-direction: row;
+      gap             : 1rem              ;
+  }
+
+
+  .row_2{
+      width           : 100%      ;
+      display         : flex      ;
+      flex-direction  : column    ;
+      align-items     : center    ;
+      justify-content : space-around;
+      gap             : 1rem              ;
+  }
+
+
+  .contain-row1{
+      width   : 90%   ;
+      height  : 50px  ;
+      background-color: var(--secondary-white);
+      width: 50% !important;
+  }
+
+
+  .escala-container{
+      width               : 100%;
+      height              : 100px;
+      display             : flex;
+      flex-direction      : row;
+      justify-content     : space-around;
+      align-items         : center;
+  }
+
+
+  .escala-contain-item{
+      width: 250px;
+      margin-right: 10px;
+  }
+
+
+  .item-escala-titulo{
+      width: 250px;
+  }
+
+
+  .row_3{
+      width           : 100%  ;
+      height          : 100px ;
+      display         : flex  ;
+      flex-direction  : row   ;
+      padding-top     : 30px  ;
+      gap: 1rem;
+  }
+
+
+  span{
+      margin: 5px;
+  }
+
+  .btn {
+    background-color: var(--principal-red);
+  }

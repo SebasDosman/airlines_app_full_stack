@@ -1,0 +1,79 @@
+
+.asientos-container{
+    width           : 100%  ;
+    display         : flex  ;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}
+
+.title-selection{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.asientos-contain{
+    width           : 330px ;
+    display         : flex  ;
+    flex-direction  : column;
+    justify-content : space-around;
+    align-items     : center;
+    /* gap: 10px; */
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.asientos-subcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.precio-asiento{
+    font-size: 15px;
+    color: var(--principal-red);
+    font-weight: 600;
+}
+
+.inactivo{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../../../assets/images/asiento.png');
+  background-size: cover;
+  filter: invert(71%) sepia(0%) saturate(6037%) hue-rotate(278deg) brightness(79%) contrast(101%);
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.icono {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../../../assets/images/asiento.png');
+  background-size: cover;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.icono:hover {
+  background-color: #ddd;
+}
+
+.icono.seleccionado {
+  opacity: 0.5;
+}
+
+.icono.seleccionado:hover {
+  background-color: #ddd;
+}
+
+.btn {
+  background-color: var(--principal-red);
+}

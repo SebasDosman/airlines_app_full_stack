@@ -1,0 +1,203 @@
+
+
+.vuelo-principal{
+
+    width           : 80%   ;
+    margin-left     : 10%   ;
+    margin-top      : 50px  ;
+    display         : flex;
+    flex-direction  : column;
+    background-color: var(--principal-red);
+    align-items     : center;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(53,72,91,.07), 0 2px 2px rgba(0,0,0,.01), 0 4px 4px rgba(0,0,0,.02), 0 10px 8px rgba(0,0,0,.03), 0 15px 15px rgba(0,0,0,.03), 0 30px 30px rgba(0,0,0,.04), 0 70px 65px rgba(0,0,0,.05);
+}
+
+.info-container{
+    width           : 100%;
+    border-bottom   : 1px solid white;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : flex-end;
+    align-items   : center;
+    gap             : 20px;
+    padding-right: 10%;
+    margin: 1%;
+}
+
+.info-container > p{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.data-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.data{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.horas-container{
+    width           :100%;
+    height          : 20%;
+    display: flex   ;
+    flex-direction  :column;
+    align-items     :center;
+    padding: 20px;
+    color           :white;
+    font-size       :20px;
+    font-weight     : 300;
+}
+
+
+.ubicacion-info{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.iata{
+    font-size: 12px;
+}
+
+.ubicacion{
+    font-size: 25px;
+}
+
+.asientos-container{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1%;
+}
+
+.data-asientos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.asiento-title{
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+.precio-asiento{
+    color: white;
+    font-size: 25px;
+    margin: 0;
+}
+
+
+.container-trayectos{
+    width           : 80%;
+    margin-left     : 10%;
+    margin-top      : 15px;
+    border-radius   : 5px;
+    height          : 223px;
+    background-color: var(--principal-red);
+    box-shadow: 0 0 0 1px rgba(53,72,91,.07), 0 2px 2px rgba(0,0,0,.01), 0 4px 4px rgba(0,0,0,.02), 0 10px 8px rgba(0,0,0,.03), 0 15px 15px rgba(0,0,0,.03), 0 30px 30px rgba(0,0,0,.04), 0 70px 65px rgba(0,0,0,.05);
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    gap             : 20px;
+    overflow-y      : auto;
+}
+
+.trayecto{
+    width           : 90%;
+    height: 220px;
+    padding: 20px;
+    border-radius   : 5px;
+    background-color: var(--secondary-white);
+}
+
+.subtrayecto-container{
+    width           : 100%;
+    height          : 100%;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-around;
+    align-items     : center;
+}
+
+
+.subtrayecto-subcontainer{
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-evenly;
+    align-items: center;
+
+    width: 33.3%;
+}
+
+.ubi-trayecto-info{
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-evenly;
+    align-items: center;
+}
+
+.hora-info{
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-evenly;
+    align-items: center;
+}
+
+.avion-contain{
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+    align-items: center;
+    width: 33.3%;
+}
+
+.ubi-trayecto-info > p{
+    margin: 0;
+}
+
+.hora-info > p{
+    margin: 0;
+}
+
+.ubi-p{
+    color: var( --principal-red );
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.little-p{
+    color: gray;
+    font-size: 12px;
+}
+
+.model-plane{
+    color: var( --principal-red );
+    font-size: 25px;
+}

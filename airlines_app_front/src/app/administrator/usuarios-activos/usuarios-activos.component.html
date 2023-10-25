@@ -1,0 +1,41 @@
+<div class="container-seleccion-reserva">
+
+  <div class="seleccionar-usuarios mt-5">
+    <h1 class="tittle">Usuarios activos</h1>
+    <form class="container-cedula" [formGroup]="cedulaForm">
+        <input  placeholder="Ingrese un número de cédula"
+                class="form-control"
+                formControlName="cedula">
+
+        <button class="btn btn-danger"
+                (click)="enviarCedula()">Buscar</button>
+
+        <span   class="alert alert-danger"
+                *ngIf="errorCedula">Ingrese un número de cédula valido</span>
+    </form>
+  </div>
+
+    <table class="table table-striped mt-5" >
+    <!-- *ngIf="reservasMostrar.length != 0"> -->
+
+            <thead class="bg-dark font-weight-normal text-light">
+              <tr>
+                  <th class="titulos">Cédula</th>
+                  <th class="titulos">Nombre</th>
+                  <th class="titulos">Apellido</th>
+                  <th class="titulos">Correo</th>
+                  <th class="titulos">Tipo de usuario</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr  *ngFor="let usuario of datosLista" class="elements-tr">
+                  <td class="element">{{ usuario.cedula }} </td>
+                  <td class="element">{{ usuario.nombre }} </td>
+                  <td class="element">{{ usuario.apellido }}</td>
+                  <td class="element">{{ usuario.correo }}  </td>
+                  <td class="element">{{ usuario.idRolUsuario }}  </td>
+              </tr>
+            </tbody>
+    </table>
+</div>

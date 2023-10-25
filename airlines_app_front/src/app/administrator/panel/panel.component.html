@@ -1,0 +1,63 @@
+<main class="administrator-component">
+
+    <div class="seleccionar-item">
+
+        <div class="row">
+
+            <div class="select-item card">
+                <img    src="https://upload.wikimedia.org/wikipedia/commons/0/00/Verkeerstoren_Brussels_Airport.jpg"
+                        class="card-img-top"
+                        alt="tower-image">
+
+                <div class="card-body mx-auto">
+                  <a routerLink="/administrador/crear-vuelo" class="btn btn-danger">Crear vuelo</a>
+                </div>
+            </div>
+
+            
+
+            <div class="select-item card">
+                <img    src="https://cdn-3.expansion.mx/dims4/default/227d740/2147483647/strip/true/crop/5616x3744+0+0/resize/1200x800!/format/webp/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fd3%2Fce%2Fe8f0e0b540ab973e5e9658d54e04%2Fistock-502384018.jpg"
+                        class="card-img-top"
+                        alt="aeropuerto">
+                <div class="card-body mx-auto">
+                    <a routerLink="/administrador/anadir-aeropuerto" class="btn btn-danger">Agregar aeropuerto</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+
+            <div class="select-item card">
+
+                <img    src="https://static.ukrinform.com/photos/2016_07/thumb_files/630_360_1468513555-7700.jpg"
+                        class="card-img-top"
+                        alt="avion">
+                <div class="card-body mx-auto">
+                    <a routerLink="/administrador/anadir-avion" class="btn btn-danger">Agregar avión</a>
+                </div>
+            </div>
+
+            <div class="select-item card">
+                <img    src="https://static.hosteltur.com/app/public/uploads/img/articles/2020/05/15/L_115105_avio-pasajeros.jpg"
+                        class="card-img-top"
+                        alt="pasajeros">
+
+                <div class="card-body mx-auto">
+                    <a routerLink="/administrador/usuarios-activos" class="btn btn-danger">Usuarios</a>
+                </div>
+            </div>
+
+            <div class="select-item card">
+                <img    src="https://cnnespanol.cnn.com/wp-content/uploads/2018/12/181219083240-aviones-seguridad-aterrizaje-vuelo-consejos-pilotos-spark-pkg-digital-original-00000608-full-169.jpg?quality=100&strip=info"
+                        class="card-img-top"
+                        alt="cerrar">
+                <div class="card-body mx-auto">
+                  <a class="btn btn-danger" (click)="cerrarSesion()">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

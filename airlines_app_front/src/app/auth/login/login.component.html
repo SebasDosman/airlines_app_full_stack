@@ -1,0 +1,22 @@
+<form (ngSubmit)="iniciarSesion()" [formGroup]="sesionForm" autocomplete="off">
+    <div class="loginmodal-container justify-content-center">
+      <h1>Iniciar Sesión</h1><br>
+
+      <input type="text" placeholder="Correo administrador" formControlName="correo">
+      <input type="password" placeholder="Cedula"  formControlName="cedula">
+
+      <div class="container-fluid h-100 mt-3">
+        <div class="row w-110 align-items-center">
+          <div class="col text-center">
+            <span *ngIf="isNotValid">Credenciales incorrectas</span>
+            <button type="submit()" class="btn btn-danger">Iniciar sesión</button>
+    			</div>
+    		</div>
+      </div>
+
+      <!-- <div class="login-help text-center mt-2">
+        <a>Regístrate - </a><a>¿Olvidaste tu contraseña?</a>
+      </div> -->
+    </div>
+</form>
+

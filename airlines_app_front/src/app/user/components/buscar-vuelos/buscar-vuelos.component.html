@@ -1,0 +1,43 @@
+<div class="buscar-vuelos-container">
+
+    <div class="select-container">
+        <span class="alert-danger" *ngIf="errorFormulario">El origen y destino son obligatorios</span>
+
+        <form class="inputs-container" [formGroup]="ubiForm" (submit)="enviarInformacion()">
+
+                <label>
+                    Origen
+                    <select class="form-select" formControlName="origen">
+                        <option *ngFor="let aeropuerto of aeropuertos" [value]="aeropuerto.idAeropuerto">{{ aeropuerto.ubicacion }}</option>
+                    </select>
+                    <i class="material-icons" aria-hidden="true">flight_takeoff</i>
+                </label>
+
+                <i class="material-icons" aria-label="Intercambio Ciudades">swap_horiz</i>
+
+
+                <label>
+                    Destino
+                    <select class="form-select" formControlName="destino">
+                        <option *ngFor="let aeropuerto of aeropuertos" [value]="aeropuerto.idAeropuerto">{{ aeropuerto.ubicacion }}</option>
+                    </select>
+
+                    <i class="material-icons" aria-hidden="true">flight_land</i>
+                </label>
+        </form>
+    </div>
+
+    <div class="select-item card">
+      <img    src="../../../../assets/images/HD-wallpaper-paradise-beach-green-paradise-beaches-heaven-trees-pool-sea-blue.jpg"
+              class="card-img-top"
+              alt="pasajeros">
+
+      <div class="card-body mx-auto">
+        <button class="btn buscar" (click)="enviarInformacion()">
+          Buscar vuelos
+        </button>
+      </div>
+    </div>
+
+
+</div>

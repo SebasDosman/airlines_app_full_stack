@@ -1,0 +1,41 @@
+.footer-container{
+    width       : 100%;
+    position    : fixed;
+    bottom      : 0;
+
+    background-color: var(--secondary-white);
+
+    display         : flex  ;
+    flex-direction  : row   ;
+    align-items     : center;
+    justify-content : space-between;
+
+    height: 40px;
+}
+
+.subtitle{
+    padding-top: 15px;
+    margin-left: 70px;
+}
+
+.subtitle > p {
+    font-size   : 20px  ;
+    font-weight : 600   ;
+    color       : var( --principal-red );
+}
+
+.link-contain{
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    justify-content : space-around;
+    width           : 350px;
+    margin-right    : 50px;
+}
+
+.link-contain > a{
+    font-size   : 14px;
+    list-style  : none;
+    text-decoration: none;
+    color       : black;
+}

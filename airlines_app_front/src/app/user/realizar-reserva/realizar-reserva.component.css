@@ -1,0 +1,47 @@
+.reserva-container{
+    width: 100%;
+    height: 100%;
+    background-color: var( --secondary-white );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+app-info-vuelo{
+    width: 100%;
+}
+
+app-datos-viajeros{
+    width           : 100%  ;
+    display         : flex  ;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}
+
+app-seleccion-asientos{
+    width           : 100%  ;
+    display         : flex  ;
+    flex-direction  : column;
+    justify-content : center;
+    align-items     : center;
+}
+
+
+.botones-container{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.precio {
+  font-weight: 600;
+}
+
+.btn {
+  background-color: var(--principal-red);
+}

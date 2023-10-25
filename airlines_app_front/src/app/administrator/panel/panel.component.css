@@ -1,0 +1,84 @@
+.administrator-component{
+    position: absolute;
+    width   : 100%;
+    height  : 85vh;
+
+    display         : flex  ;
+    align-items     : center;
+    justify-content : center;
+}
+
+
+.seleccionar-item{
+    width           : 700px        ;
+    background-color: white   ;
+    box-shadow: 0 0 0 1px rgba(53,72,91,.07), 0 2px 2px rgba(0,0,0,.01), 0 4px 4px rgba(0,0,0,.02), 0 10px 8px rgba(0,0,0,.03), 0 15px 15px rgba(0,0,0,.03), 0 30px 30px rgba(0,0,0,.04), 0 70px 65px rgba(0,0,0,.05);
+    border-radius: 5px;
+    border-bottom   : 5px solid var(--principal-red);
+
+
+    display         : flex          ;
+    flex-direction  : column        ;
+    align-items     : center        ;
+    justify-content : space-around  ;
+
+    padding:  20px;
+}
+
+
+.row{
+    width           : 100%          ;
+    height          : 190px         ;
+
+    display         : flex          ;
+    flex-direction  : row           ;
+    justify-content : space-between ;
+    align-items     : center        ;
+    margin-bottom   : 20px          ;
+}
+
+
+.select-item{
+    width   : 200px ;
+    height  : 100%  ;
+    padding : 0     ;
+}
+
+
+.card-img-top{
+    width: 199px !important;
+    height: 115px!important ;
+}
+
+.btn {
+  background-color: var(--principal-red);
+}
+
+@media ( min-width: 0px ) and ( max-width: 650px ) {
+    .administrator-component{
+        position: relative;
+
+        height  : 100%  ;
+        width   : 100vw ;
+        padding : 0     ;
+    }
+
+
+    .seleccionar-item{
+
+        width           : 100%;
+        height          : 100%;
+        background-color: var( --secondary-white );
+        box-shadow      : none                    ;
+        flex-direction  : column;
+    }
+
+    .row{
+        height: 650px;
+        flex-direction: column;
+    }
+
+    .select-item{
+        height  : 200px ;
+    }
+}

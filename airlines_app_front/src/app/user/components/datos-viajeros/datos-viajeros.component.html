@@ -1,0 +1,52 @@
+<div class="contenedor-usuario" *ngIf="usuario == undefined">
+
+    <p class="title mt-4">Datos de reserva</p>
+
+    <span   class="alert alert-danger"
+            *ngIf="errorCedula">Ingrese un número de identificación ( entre 6 y 12 números )</span>
+
+    <form   class       ="contenedor-cedula"
+            [formGroup] ="cedulaForm"
+            *ngIf="usuario == undefined">
+
+            <input  formControlName ="cedula"
+                    placeholder     ="Ingrese su número de identificación"
+                    class           ="form-control">
+
+            <button class   ="btn btn-danger"
+                    (click) ="enviarCedula()">Enviar</button>
+    </form>
+
+    <form   class       ="contenedor-usuarios"
+            [formGroup] ="usuarioForm"
+            *ngIf       ="activarForm && usuario == undefined">
+
+            <br>
+
+            <p class="title">Datos de usuario</p>
+
+            <span class="alert alert-danger" *ngIf="errorDatosUsuario">Todos los campos son obligatorios ( Máximo 25 caracteres )</span>
+            <span class="alert alert-danger" *ngIf="errorCorreoUsuario">Ingrese un correo válido y con máximo 50 caracteres</span>
+
+            <input  formControlName ="nombre"
+                    class           ="form-control"
+                    placeholder     ="Ingrese su nombre">
+
+            <input  formControlName ="apellido"
+                    class           ="form-control"
+                    placeholder     ="Ingrese su apellido">
+
+            <input  formControlName ="correo"
+                    class           ="form-control"
+                    placeholder     ="Ingrese su correo">
+
+            <button (click)="enviarUsuario()"
+                    class="btn btn-danger">Enviar</button>
+
+    </form>
+
+
+    <!-- <span   *ngIf="usuario != undefined"
+            class="title">Bienvenido {{ usuario.nombre }}</span> -->
+
+</div>

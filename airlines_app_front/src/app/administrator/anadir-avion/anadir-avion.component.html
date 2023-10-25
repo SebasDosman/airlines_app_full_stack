@@ -1,0 +1,26 @@
+<main class="avion-component">
+
+    <form class="container-items" (submit)="$event.preventDefault()" [formGroup]="avionForm">
+        <h1 class="tittle">Añadir avión</h1>
+
+        <span *ngIf="errorModelo" class="alert-danger">El campo "Modelo del avión" es obligatorio y con máximo 25 caracteres</span>
+        <span *ngIf="errorAerolinea" class="alert-danger">El campo "Nombre de aerolínea" es obligatorio y con máximo 25 caracteres</span>
+
+        <div class="input-group mb-3 contain-row1">
+            <span class="input-group-text">Modelo del avión</span>
+            <input  type="text"
+                      class="form-control input-row-1"
+                      formControlName="modelo">
+        </div>
+
+        <div class="input-group mb-3 contain-row1">
+            <span class="input-group-text">Nombre de aerolínea</span>
+            <input  type="text"
+                      class="form-control input-row-1"
+                      formControlName="aerolinea">
+        </div>
+
+        <button class="btn btn-danger"
+                (click)="guardarInformacion()">Guardar</button>
+    </form>
+</main>

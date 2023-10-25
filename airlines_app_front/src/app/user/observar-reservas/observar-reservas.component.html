@@ -1,0 +1,40 @@
+<div class="container-seleccion-reserva">
+
+  <div class="seleccionar-reservas mt-5">
+    <h1 class="tittle">Tus reservas</h1>
+    <form class="container-cedula" [formGroup]="cedulaForm">
+        <input  placeholder="Ingrese su cédula"
+                class="form-control"
+                formControlName="cedula">
+
+        <button class="btn btn-danger"
+                (click)="enviarCedula()">Buscar</button>
+
+    </form>
+  </div>
+
+  <span   class="alert alert-danger mt-5"
+          *ngIf="errorCedula">Ingrese un número de cédula válido</span>
+
+  <span   class="alert alert-danger mt-5"
+          *ngIf="errorUsuario">El número de cédula ingresado aún no ha realizado reservas</span>
+
+    <table class="table table-striped mt-5" *ngIf="reservasMostrar.length != 0">
+
+            <thead class="bg-dark font-weight-normal text-light">
+              <tr>
+                  <th class="titulos">Id vuelo</th>
+                  <th class="titulos">Precio Total</th>
+                  <th class="titulos">Fecha</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr  *ngFor="let reserva of reservasMostrar" class="elements-tr">
+                  <td class="element" [routerLink]="'/usuario/observar-reservas/' + reserva.idReserva">{{ reserva.idVuelo }}                </td>
+                  <td class="element" [routerLink]="'/usuario/observar-reservas/' + reserva.idReserva">{{ reserva.precioTotal }}            </td>
+                  <td class="element" [routerLink]="'/usuario/observar-reservas/' + reserva.idReserva">{{ reserva.fecha| date:'medium'  }}  </td>
+              </tr>
+            </tbody>
+    </table>
+</div>
